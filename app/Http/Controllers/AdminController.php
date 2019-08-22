@@ -93,8 +93,6 @@ class AdminController extends Controller
         $files = glob('public/storage/users/*');
         Zipper::make('public/pictures.zip')->add($files)->close();
 
-        dd()
-
         return response()
             ->download('public/pictures.zip');
     }
