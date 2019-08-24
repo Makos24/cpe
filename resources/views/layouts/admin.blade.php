@@ -48,24 +48,14 @@
                 <i class="fas fa-fw fa-users"></i>
                 <span>Users</span></a>
         </li>
-        @if(Auth::user()->email == 'yelmism@yahoo.com' || Auth::user()->email == 'admin@admin.com')
+        @if(Auth::user()->level == 1)
         <li class="nav-item">
             <a class="nav-link" href="{{route('admin.admins')}}">
                 <i class="fas fa-fw fa-user-secret"></i>
                 <span>Admins</span></a>
         </li>
         @endif
-        <li class="nav-item">
-            <a class="nav-link" href="{{route('lccs')}}">
-                <i class="fas fa-fw fa-book"></i>
-                <span>LCC's</span></a>
-        </li>
-        <li class="nav-item">
-
-            <a class="nav-link" href="{{route('groups')}}">
-                <i class="fas fa-fw fa-list"></i>
-                <span>Groups</span></a>
-        </li>
+       
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
